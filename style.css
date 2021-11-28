@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #10151d;
+  position: relative;
+}
+
+.container header {
+  position: fixed;
+  z-index: 11;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Lora", serif;
+}
+
+.container header img {
+  opacity: 0.8;
+  width: 25px;
+  height: 25px;
+}
+
+.container header img:hover {
+  opacity: 1;
+}
+
+.navbar ul {
+  padding-top: 10%;
+  right: -300px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  width: 300px;
+  height: 100vh;
+  background-color: #10151d;
+  transition: 0.5s;
+}
+
+.navbar ul li {
+  list-style: none;
+  font-size: 1em;
+}
+
+.navbar ul li a {
+  display: inline-block;
+  text-align: center;
+  width: 300px;
+  height: 100px;
+  line-height: 100px;
+  text-decoration: none;
+  color: rgb(128, 127, 127);
+  font-size: 1.3em;
+}
+
+.navbar ul li a:hover {
+  background-color: #282b30;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.container header .hamburgerBtn {
+  margin: 30px 30px 0 0;
+  cursor: pointer;
+}
+
+.container header .logo {
+  font-family: "Shadows Into Light", cursive;
+  margin: 20px 0 0 30px;
+  color: #fff;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+.container main {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.option {
+  margin-top: 16%;
+  width: 40%;
+  text-align: center;
+}
+
+.option p {
+  font-size: 4.5em;
+  font-family: "Lora", serif;
+  color: #fff;
+}
+
+.option ul li {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.2em;
+  margin-top: 50px;
+}
+
+.option ul li a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px;
+  font-weight: 300;
+  width: 130px;
+  color: #fff;
+  border: 1.5px solid #fff;
+  transition: 0.3s;
+}
+
+.option ul li a:hover {
+  border: 1.5px solid transparent;
+  color: #10151d;
+  background-color: #fff;
+}
+
+.img {
+  width: 60%;
+  overflow: hidden;
+}
+
+.img img {
+  width: 1280px;
+  height: 100vh;
+}
+
+footer {
+  position: absolute;
+  z-index: 9;
+  bottom: 5%;
+  width: 40%;
+  text-align: center;
+}
+
+footer p {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 300;
+  position: relative;
+}
+
+footer p::after {
+  content: "";
+  width: 50%;
+  height: 1.5px;
+  background-color: #fff;
+  position: absolute;
+  left: 25%;
+  bottom: -8px;
+}
+
+footer ul li {
+  display: inline-block;
+  margin: 20px 10px 0;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.705);
+}
+
+footer ul li a:hover {
+  color: #fff;
+}
+
+footer ul li a i {
+  transform: scale(1.5);
+}
+
+footer ul li a i:hover {
+  transform: scale(1.8);
+}
+
+@media all and (max-width: 580px) {
+  .container header .logo {
+    margin: 5% 5%;
+    font-size: 1.4em;
+  }
+  .container header .hamburgerBtn {
+    margin: 5% 5%;
+    cursor: pointer;
+  }
+  .container header .img {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+  }
+  .container main .img {
+    display: none;
+  }
+  .container main .option {
+    width: 100%;
+    padding-top: 30%;
+    background: url(gambar/landingpage/3.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .option ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .option ul li {
+    margin: 5px;
+  }
+  .container .option p {
+    font-size: 2.8em;
+  }
+  .container header {
+    width: 100%;
+  }
+  .container footer {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 350px) {
+  .container header .logo {
+    margin: 3% 3%;
+    font-size: 1.4em;
+  }
+  .container main .option {
+    width: 100%;
+    padding-top: 15%;
+    background: url(gambar/landingpage/3.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .option ul {
+    margin-top: 35px;
+  }
+  .container .option p {
+    font-size: 2.2em;
+  }
+  .container li a {
+    font-size: 15px;
+  }
+}
